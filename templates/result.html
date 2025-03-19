@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Summary</title>
+    <link rel="stylesheet" href="static\result.css">
+</head>
+<body>
+    <h1>News Summary for "{{ headline }}"</h1>
+
+    <h2>Summary</h2>
+    <p>{{ summary }}</p>
+
+    <h2>News Articles</h2>
+    <ul>
+        {% for item in news %}
+            <li><a href="{{ item.link }}" target="_blank">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Search Again</a>
+</body>
+</html>
